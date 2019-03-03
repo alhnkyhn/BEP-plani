@@ -635,7 +635,7 @@ FORM SECTİON
   height:35px;
 }
 .form-style-5 .number {
-  background: #1abc9c;
+  background: #01bafd;
   color: #fff;
   height: 30px;
   width: 30px;
@@ -656,19 +656,19 @@ FORM SECTİON
   padding: 19px 39px 18px 39px;
   color: #FFF;
   margin: 0 auto;
-  background: #1abc9c;
+  background: #01bafd;
   font-size: 18px;
   text-align: center;
   font-style: normal;
   width: 100%;
-  border: 1px solid #16a085;
+  border: 1px solid #015d7f;
   border-width: 1px 1px 3px;
   margin-bottom: 10px;
 }
 .form-style-5 input[type="submit"]:hover,
 .form-style-5 input[type="button"]:hover
 {
-  background: #109177;
+  background: #015d7f;
 }
 
 /*==================
