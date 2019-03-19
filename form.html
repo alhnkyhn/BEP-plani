@@ -42,7 +42,7 @@
 
 <body>
   <div class="form-style-5">
-    <form>
+    <form method="POST">
       <fieldset>
 
         <legend><span class="number">1</span> Okul Bilgisi</legend>
@@ -56,15 +56,15 @@
         <select name="ilce" id="ilce" class="form-control" disabled="disabled">
           <option value="">Seçiniz...</option>
         </select>
-        <input type="text" name="field1" placeholder="Okul Adı"> 
+        <input type="text" id="okulAd" name="field1" placeholder="Okul Adı"> 
       </fieldset>
       
       <fieldset>
       <legend><span class="number">2</span>Öğrenci Bilgisi</legend>
-      <input type="text" name="field1" placeholder="Öğrencinin Numarası">
-      <input type="text" name="field2" placeholder="Öğrencinin Adı Soyadı">
+      <input type="text" id="ogrNo" name="field1" placeholder="Öğrencinin Numarası">
+      <input type="text" id="ogrAd" name="field2" placeholder="Öğrencinin Adı Soyadı">
       </fieldset>
-      <input type="submit" value="İleri" />
+      <input id="ileriButon" type="submit" value="İleri" />
     </form>
   </div>
 
@@ -76,6 +76,7 @@
             $("#il").append(row);
         })
     });
+
     $("#il").on("change", function(){
         var il=$(this).val();
         $("#ilce").attr("disabled", false).html("<option value=''>Seçin..</option>");
