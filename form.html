@@ -24,7 +24,7 @@
     <!-- Main style sheet -->
     <link href="assets/css/style.css" rel="stylesheet">    
 
-   
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,700' rel='stylesheet' type='text/css'>
@@ -68,7 +68,7 @@
     </form>
   </div>
 
-  <script>
+  <script type="text/javascript">
     $.getJSON("il-bolge.json", function(sonuc){
         $.each(sonuc, function(index, value){
             var row="";
@@ -91,6 +91,19 @@
             });
         });
     });
+  </script>
+  <span id="dversion">sa</span>
+
+  <script type="text/javascript">
+     $(document).ready(function() {
+            if(jsPDF ) {
+              var doc = new jsPDF();
+              doc.text('Hello world!', 20, 20);
+              doc.text('This is client-side Javascript, pumping out a PDF.', 20, 30);
+              doc.save('asd.pdf');
+            }
+          });
+    
   </script>
 
 </body>
